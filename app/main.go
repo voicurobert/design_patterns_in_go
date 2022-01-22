@@ -7,6 +7,9 @@ import (
 	factory2 "github.com/voicurobert/design_patterns_in_go/app/src/section_03_factories"
 	prototype2 "github.com/voicurobert/design_patterns_in_go/app/src/section_04_prototype"
 	singleton "github.com/voicurobert/design_patterns_in_go/app/src/section_05_singleton"
+	adapter "github.com/voicurobert/design_patterns_in_go/app/src/section_07_adapter"
+	bridge "github.com/voicurobert/design_patterns_in_go/app/src/section_08_bridge"
+	composite "github.com/voicurobert/design_patterns_in_go/app/src/section_09_composite"
 	"strings"
 )
 
@@ -20,7 +23,13 @@ func main() {
 
 	//runPrototype()
 
-	runSingleton()
+	//runSingleton()
+
+	//runAdapter()
+
+	//runBridge()
+
+	runComposite()
 
 }
 
@@ -61,6 +70,19 @@ func runPrototype() {
 
 func runSingleton() {
 	singleton.SingletonExample()
+	singleton.DependencyInversionSingletonExample()
+}
+
+func runAdapter() {
+	adapter.AdapterExample()
+}
+
+func runBridge() {
+	bridge.BridgeExample()
+}
+
+func runComposite() {
+	composite.GeometricShapesExamples()
 }
 
 func printPatternDescription(desc string) {

@@ -32,7 +32,18 @@ func GetSingletonDatabase() *singletonDatabase {
 	return instance
 }
 
+func GetTotalPopulation(cities []string) int {
+	result := 0
+	for _, city := range cities {
+		result += GetSingletonDatabase().GetPopulation(city)
+	}
+	return result
+}
+
 func SingletonExample() {
 	db := GetSingletonDatabase()
 	fmt.Println(db.GetPopulation("Berlin"))
+	tp := GetTotalPopulation([]string{"Berlin", "Bucuresti"})
+	ok := tp == (4445550 + 44553311)
+	fmt.Println(ok)
 }
