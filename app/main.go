@@ -16,6 +16,15 @@ import (
 	proxy "github.com/voicurobert/design_patterns_in_go/app/src/section_12_proxy"
 	chain_of_responsability "github.com/voicurobert/design_patterns_in_go/app/src/section_13_chain_of_responsibility"
 	command "github.com/voicurobert/design_patterns_in_go/app/src/section_14_command"
+	interpreter "github.com/voicurobert/design_patterns_in_go/app/src/section_15_interpreter"
+	iterator "github.com/voicurobert/design_patterns_in_go/app/src/section_16_iterator"
+	mediator "github.com/voicurobert/design_patterns_in_go/app/src/section_17_mediator"
+	memento "github.com/voicurobert/design_patterns_in_go/app/src/section_18_memento"
+	observer "github.com/voicurobert/design_patterns_in_go/app/src/section_19_observer"
+	state "github.com/voicurobert/design_patterns_in_go/app/src/section_20_state"
+	strategy "github.com/voicurobert/design_patterns_in_go/app/src/section_21_strategy"
+	template_method "github.com/voicurobert/design_patterns_in_go/app/src/section_22_template_method"
+	visitor "github.com/voicurobert/design_patterns_in_go/app/src/section_23_visitor"
 	"strings"
 )
 
@@ -47,7 +56,25 @@ func main() {
 
 	//runChainOfResponsibility()
 
-	runCommand()
+	//runCommand()
+
+	//runInterpreter()
+
+	//runIterator()
+
+	//runMediator()
+
+	//runMemento()
+
+	//runObserver()
+
+	//runState()
+
+	//runStrategy()
+
+	//runTemplateMethod()
+
+	runVisitor()
 }
 
 func runSolid() {
@@ -128,6 +155,49 @@ func runChainOfResponsibility() {
 
 func runCommand() {
 	command.Example()
+}
+
+func runInterpreter() {
+	interpreter.Example()
+}
+
+func runIterator() {
+	iterator.IterationExample()
+	iterator.TreeTraversalExample()
+}
+
+func runMediator() {
+	mediator.ChatRoomExample()
+}
+
+func runMemento() {
+	memento.Example()
+	fmt.Println()
+	memento.UndeRedoExample()
+}
+
+func runObserver() {
+	observer.ObserverAndObservableExample()
+	fmt.Println()
+	observer.PropertyObserversExample()
+}
+
+func runState() {
+	//state.ClassicExample()
+	//state.HandmadeStateMachineExample()
+	state.SwitchBasedStateMachineExample()
+}
+
+func runStrategy() {
+	strategy.Example()
+}
+
+func runTemplateMethod() {
+	template_method.Example()
+}
+
+func runVisitor() {
+	visitor.IntrusiveVisitorExample()
 }
 
 func printPatternDescription(desc string) {
