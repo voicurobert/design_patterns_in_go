@@ -10,6 +10,12 @@ import (
 	adapter "github.com/voicurobert/design_patterns_in_go/app/src/section_07_adapter"
 	bridge "github.com/voicurobert/design_patterns_in_go/app/src/section_08_bridge"
 	composite "github.com/voicurobert/design_patterns_in_go/app/src/section_09_composite"
+	decorator "github.com/voicurobert/design_patterns_in_go/app/src/section_09_decorator"
+	facade "github.com/voicurobert/design_patterns_in_go/app/src/section_10_facade"
+	flyweight "github.com/voicurobert/design_patterns_in_go/app/src/section_11_flyweight"
+	proxy "github.com/voicurobert/design_patterns_in_go/app/src/section_12_proxy"
+	chain_of_responsability "github.com/voicurobert/design_patterns_in_go/app/src/section_13_chain_of_responsibility"
+	command "github.com/voicurobert/design_patterns_in_go/app/src/section_14_command"
 	"strings"
 )
 
@@ -29,8 +35,19 @@ func main() {
 
 	//runBridge()
 
-	runComposite()
+	//runComposite()
 
+	//runDecorator()
+
+	//runFacade()
+
+	//runFlyweight()
+
+	//runProxy()
+
+	//runChainOfResponsibility()
+
+	runCommand()
 }
 
 func runSolid() {
@@ -83,6 +100,34 @@ func runBridge() {
 
 func runComposite() {
 	composite.GeometricShapesExamples()
+}
+
+func runDecorator() {
+	decorator.MultipleAggregationExample()
+	decorator.DecoratorExample()
+}
+
+func runFacade() {
+	facade.FacadeExample()
+}
+
+func runFlyweight() {
+	flyweight.TextFormattingExample()
+	flyweight.UserNamesExample()
+}
+
+func runProxy() {
+	proxy.ProtectionProxyExample()
+	proxy.VirtualProxyExample()
+}
+
+func runChainOfResponsibility() {
+	chain_of_responsability.MethodChainExample()
+	chain_of_responsability.BrokerChainExample()
+}
+
+func runCommand() {
+	command.Example()
 }
 
 func printPatternDescription(desc string) {
